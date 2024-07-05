@@ -1,0 +1,10 @@
+[alias]
+	br = branch
+	brm = branch -m
+	brd = branch -D
+	pom = pull origin main
+	com = commit -m
+	po = push origin
+	pof = push origin -f
+	undo = reset HEAD~
+	fclean = reset --hard HEAD
