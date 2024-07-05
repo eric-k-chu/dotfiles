@@ -2,7 +2,7 @@
 	br = branch
 	brm = branch -m
 	brd = branch -D
-  pl = pull origin
+  	pl = pull origin
 	plm = pull origin main
 	com = commit -m
 	psh = push origin
