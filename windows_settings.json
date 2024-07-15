@@ -13,6 +13,7 @@
   "editor.minimap.enabled": false,
   "editor.scrollbar.vertical": "hidden",
   "editor.stickyScroll.enabled": false,
+  "editor.guides.indentation": false,
   "editor.tabSize": 2,
   "explorer.compactFolders": false,
   "files.exclude": {
@@ -55,5 +56,6 @@
   "workbench.settings.editor": "json",
   "workbench.statusBar.visible": false,
   "workbench.tree.enableStickyScroll": false,
-  "workbench.tree.indent": 20
+  "workbench.tree.indent": 20,
+  "zenMode.hideLineNumbers": false
 }
