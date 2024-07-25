@@ -1,14 +1,30 @@
 {
+  "[typescript]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.ts": "never",
+      "source.organizeImports": "never",
+      "source.removeUnusedImports": "always"
+    },
+    "editor.formatOnSave": true
+  },
+  "[typescriptreact]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.ts": "never",
+      "source.organizeImports": "never",
+      "source.removeUnusedImports": "always"
+    },
+    "editor.formatOnSave": true
+  },
   "breadcrumbs.enabled": false,
+  "editor.codeLens": false,
   "editor.cursorBlinking": "solid",
   "editor.cursorStyle": "line",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   // "editor.fontFamily": "CaskaydiaCove Nerd Font",
   "editor.fontFamily": "JetBrains Mono",
-  "editor.codeLens": true,
   "editor.fontSize": 14,
-  "editor.formatOnSave": true,
   "editor.glyphMargin": false,
+  "editor.guides.indentation": false,
   "editor.minimap.enabled": false,
   "editor.stickyScroll.enabled": false,
   "editor.tabSize": 2,
@@ -25,6 +41,7 @@
     "**/Thumbs.db": true
   },
   "files.restoreUndoStack": false,
+  "github.copilot.chat.welcomeMessage": "never",
   "template-string-converter.autoRemoveTemplateString": true,
   "template-string-converter.enabled": true,
   "template-string-converter.quoteType": "both",
@@ -36,8 +53,8 @@
   ],
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.shellIntegration.enabled": false,
-  "typescript.implementationsCodeLens.enabled": true,
-  "typescript.referencesCodeLens.enabled": true,
+  "typescript.implementationsCodeLens.enabled": false,
+  "typescript.referencesCodeLens.enabled": false,
   "window.commandCenter": false,
   "window.title": "${activeEditorMedium}",
   "workbench.activityBar.location": "top",
@@ -49,5 +66,5 @@
   "workbench.settings.editor": "json",
   "workbench.tree.enableStickyScroll": false,
   "workbench.tree.indent": 20,
-  "workbench.statusBar.visible": false
+  "window.titleBarStyle": "custom"
 }
