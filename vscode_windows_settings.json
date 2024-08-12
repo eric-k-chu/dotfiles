@@ -1,5 +1,9 @@
 {
   "breadcrumbs.enabled": false,
+  "editor.codeActionsOnSave": {
+    "source.removeUnusedImports": "always",
+    "source.sortImports": "always"
+  },
   "editor.codeLens": true,
   "editor.cursorBlinking": "solid",
   "editor.cursorStyle": "line",
@@ -7,13 +11,13 @@
   // "editor.fontFamily": "CaskaydiaCove Nerd Font",
   "editor.fontFamily": "JetBrains Mono NL",
   "editor.fontSize": 14,
-  "editor.letterSpacing": 0.5,
   "editor.formatOnSave": true,
   "editor.glyphMargin": false,
+  "editor.guides.indentation": false,
+  "editor.letterSpacing": 0.5,
   "editor.minimap.enabled": false,
   "editor.scrollbar.vertical": "hidden",
   "editor.stickyScroll.enabled": false,
-  "editor.guides.indentation": false,
   "editor.tabSize": 2,
   "explorer.compactFolders": false,
   "files.exclude": {
@@ -28,7 +32,7 @@
     "**/Thumbs.db": true
   },
   "files.restoreUndoStack": false,
-  "glassit.alpha": 235,
+  "glassit.alpha": 250,
   "template-string-converter.autoRemoveTemplateString": true,
   "template-string-converter.enabled": true,
   "template-string-converter.quoteType": "both",
@@ -46,7 +50,6 @@
   "typescript.referencesCodeLens.enabled": true,
   "window.commandCenter": false,
   "window.title": "${activeEditorMedium}",
-  "window.zoomLevel": 1,
   "workbench.activityBar.location": "top",
   "workbench.colorTheme": "Ayu Mirage Bordered",
   "workbench.editor.restoreViewState": false,
@@ -58,4 +61,10 @@
   "workbench.tree.enableStickyScroll": false,
   "workbench.tree.indent": 20,
   "zenMode.hideLineNumbers": false
+  // "terminal.integrated.profiles.windows": {
+  //   "Wezterm": {
+  //     "path": "C:\\Program Files\\WezTerm\\wezterm-gui.exe",
+  //     "icon": "terminal-powershell"
+  //   }
+  // }
 }
