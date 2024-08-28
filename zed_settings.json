@@ -7,7 +7,6 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "language_servers": ["typescript", "!eslint"],
   "ui_font_size": 14,
   "buffer_font_size": 14,
   "scrollbar": {
@@ -30,37 +29,17 @@
   "indent_guides": {
     "enabled": false
   },
-  "formatter": "prettier",
+  "tab_size": 2,
   "languages": {
-    "JavaScript": {
-      "formatter": {
-        "code_actions": {
-          "source.fixAll.eslint": false,
-          "source.removeUnusedImports": true
-        }
-      }
-    },
     "TypeScript": {
-      "format_on_save": "on",
-      "formatter": {
-        "code_actions": {
-          "source.fixAll.eslint": false,
-          "source.organizeImports": false,
-          "source.sortImports": false,
-          "source.removeUnusedImports": true
-        }
+      "code_actions_on_format": {
+        "source.organizeImports": true
       }
     },
     "TSX": {
-      "formatter": {
-        "code_actions": {
-          "source.fixAll.eslint": false,
-          "source.organizeImports": false,
-          "source.sortImports": false
-          // "source.removeUnusedImports": true
-        }
+      "code_actions_on_format": {
+        "source.organizeImports": true
       }
     }
-  },
-  "tab_size": 2
+  }
 }
