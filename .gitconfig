@@ -1,11 +1,15 @@
 [alias]
 	br = branch
+	sw = switch
 	brm = branch -m
 	brd = branch -D
-  	pl = pull origin
+	pl = pull origin
+	plr = pull origin --rebase
 	plm = pull origin main
 	com = commit -m
 	psh = push origin
 	fpsh = push origin -f
 	undo = reset HEAD~
 	fclean = reset --hard HEAD
+	cob = checkout -b
+	co = checkout
