@@ -1,9 +1,21 @@
 {
+  "[markdown]": {
+    "editor.formatOnSave": true
+  },
+  "[mdx]": {
+    "editor.codeActionsOnSave": {
+      "source.addMissingImports.ts": "never",
+      "source.fixAll.eslint": "never",
+      "source.organizeImports": "never",
+      "source.removeUnusedImports": "never"
+    },
+    "editor.formatOnSave": true
+  },
   "[typescript]": {
     "editor.codeActionsOnSave": {
       "source.fixAll.ts": "never",
       "source.organizeImports": "never",
-      "source.removeUnusedImports": "always",
+      "source.removeUnusedImports": "always"
     },
     "editor.formatOnSave": true
   },
@@ -15,31 +27,19 @@
     },
     "editor.formatOnSave": true
   },
-  "[mdx]": {
-    "editor.formatOnSave": true,
-    "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": "never",
-      "source.addMissingImports.ts": "never",
-      "source.organizeImports": "never",
-      "source.removeUnusedImports": "never",
-    }
-  },
-  "[markdown]": {
-    "editor.formatOnSave": true
-  },
-  "breadcrumbs.enabled": false,
   "editor.codeLens": false,
   "editor.cursorBlinking": "solid",
   "editor.cursorStyle": "line",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   // "editor.fontFamily": "CaskaydiaCove Nerd Font",
-  "editor.fontFamily": "JetBrains Mono",
+  "editor.fontFamily": "JetBrains Mono NL",
   "editor.fontSize": 14,
+  "editor.lineHeight": 1.6,
   "editor.glyphMargin": false,
   "editor.guides.indentation": false,
   "editor.minimap.enabled": false,
+  "editor.scrollbar.vertical": "visible",
   "editor.stickyScroll.enabled": false,
-  "editor.scrollbar.vertical": "hidden",
   "editor.tabSize": 2,
   "explorer.compactFolders": false,
   "files.exclude": {
@@ -47,16 +47,16 @@
     "**/.git": true,
     "**/.hg": true,
     "**/.svn": true,
-    "**/build": true,
     "**/CVS": true,
+    "**/Thumbs.db": true,
+    "**/build": true,
     "**/dist": true,
     "**/node_modules/": true,
-    "node_modules/": true,
     "*/node_modules/": true,
-    "**/Thumbs.db": true
+    "node_modules/": true
   },
   "files.restoreUndoStack": false,
-  "github.copilot.chat.welcomeMessage": "never",
+  "git.autorefresh": true,
   "template-string-converter.autoRemoveTemplateString": true,
   "template-string-converter.enabled": true,
   "template-string-converter.quoteType": "both",
@@ -69,11 +69,21 @@
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.shellIntegration.enabled": false,
   "typescript.implementationsCodeLens.enabled": false,
+  "typescript.preferences.autoImportFileExcludePatterns": [
+    "**/dist/",
+    "**/build/",
+  ],
+  "typescript.format.semicolons": "remove",
+  "typescript.preferences.quoteStyle": "single",
   "typescript.referencesCodeLens.enabled": false,
+  "typescript.updateImportsOnFileMove.enabled": "never",
+  "typescript.preferGoToSourceDefinition": true,
+  "typescript.tsserver.watchOptions": "vscode",
   "window.commandCenter": false,
   "window.title": "${activeEditorMedium}",
+  "window.titleBarStyle": "custom",
   "workbench.activityBar.location": "top",
-  "workbench.colorTheme": "Ayu Mirage Bordered",
+  "workbench.colorTheme": "Catppuccin Macchiato",
   "workbench.editor.restoreViewState": false,
   "workbench.iconTheme": "eq-material-theme-icons-light",
   "workbench.layoutControl.enabled": false,
@@ -81,10 +91,13 @@
   "workbench.settings.editor": "json",
   "workbench.tree.enableStickyScroll": false,
   "workbench.tree.indent": 20,
-  "window.titleBarStyle": "custom",
-  "git.autorefresh": true,
-  "typescript.preferences.autoImportFileExcludePatterns": [
-    "**/dist/",
-    "**/build/",
-  ],
+  "workbench.sideBar.location": "right",
+  "editor.lineNumbers": "relative",
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/.hg/store/**": true,
+    "**/node_modules/**": true,
+    "**/build/**": true,
+  },
 }
