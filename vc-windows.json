@@ -52,7 +52,7 @@
   "typescript.implementationsCodeLens.enabled": false,
   "typescript.referencesCodeLens.enabled": false,
   "window.commandCenter": false,
-  "window.title": "${activeEditorMedium}",
+  "window.title": "${activeEditorShort}",
   "workbench.activityBar.location": "hidden",
   "workbench.editor.restoreViewState": false,
   "workbench.iconTheme": "eq-material-theme-icons",
