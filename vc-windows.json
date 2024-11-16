@@ -44,8 +44,8 @@
     "**/Thumbs.db": true
   },
   "files.restoreUndoStack": false,
-  "glassit.alpha": 230,
-  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "glassit.alpha": 215,
+  "terminal.integrated.defaultProfile.windows": "Windows PowerShell",
   "terminal.integrated.fontFamily": "Hack",
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.shellIntegration.enabled": false,
@@ -73,7 +73,7 @@
   "window.menuBarVisibility": "toggle",
   "workbench.statusBar.visible": true,
   "workbench.sideBar.location": "right",
-  "workbench.colorTheme": "Catppuccin Macchiato",
+  "workbench.colorTheme": "Catppuccin Mocha",
   "[rust]": {
     "editor.defaultFormatter": "rust-lang.rust-analyzer"
   },
