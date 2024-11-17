@@ -1,0 +1,86 @@
+{
+  "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+  "files": {
+    "ignore": [],
+    "ignoreUnknown": false
+  },
+  "formatter": {
+    "attributePosition": "auto",
+    "bracketSpacing": true,
+    "enabled": true,
+    "formatWithErrors": false,
+    "ignore": ["**/node_modules", "**/.next", "**/dist", "**/build"],
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineEnding": "lf",
+    "lineWidth": 100,
+    "useEditorconfig": true
+  },
+  "javascript": {
+    "formatter": {
+      "enabled": true,
+      "arrowParentheses": "always",
+      "attributePosition": "auto",
+      "bracketSameLine": false,
+      "bracketSpacing": true,
+      "jsxQuoteStyle": "single",
+      "quoteProperties": "asNeeded",
+      "quoteStyle": "single",
+      "semicolons": "asNeeded",
+      "trailingCommas": "es5"
+    }
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "correctness": {
+        "useExhaustiveDependencies": "off"
+      },
+      "nursery": {
+        "useSortedClasses": {
+          "fix": "safe",
+          "level": "error",
+          "options": {
+            "functions": ["clsx", "cva", "tw"]
+          }
+        }
+      },
+      "a11y": {
+        "useFocusableInteractive": "off",
+        "useMediaCaption": "off",
+        "useSemanticElements": "off"
+      },
+      "style": {
+        "useNodejsImportProtocol": {
+          "fix": "safe",
+          "level": "warn"
+        }
+      },
+      "suspicious": {
+        "noArrayIndexKey": "warn"
+      },
+      "security": {
+        "noDangerouslySetInnerHtml": "off"
+      },
+      "recommended": true
+    }
+  },
+  "organizeImports": {
+    "enabled": true
+  },
+  "json": {
+    "formatter": {
+      "enabled": true,
+      "indentWidth": 2,
+      "indentStyle": "space",
+      "trailingCommas": "none",
+      "lineEnding": "lf",
+      "lineWidth": 100
+    }
+  },
+  "vcs": {
+    "clientKind": "git",
+    "enabled": true,
+    "useIgnoreFile": true
+  }
+}
