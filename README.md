@@ -4,7 +4,7 @@
 bunx degit eric-k-chu/config/<filename or dirname>
 ```
 
-# audio pops issue intel
+# audio pops issue intel ubuntu
 
 fix
 ```sh
