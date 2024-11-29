@@ -1,7 +1,7 @@
 # dotfiles
 
 ```sh
-bunx degit eric-k-chu/config/<filename or dirname>
+bunx degit eric-k-chu/dotfiles/<filename or dirname>
 ```
 
 # audio pops issue intel ubuntu
