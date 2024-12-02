@@ -1,0 +1,15 @@
+[
+  {
+    "key": "ctrl+o",
+    "command": "editor.action.goToDeclaration"
+  },
+  {
+    "key": "ctrl+i",
+    "command": "workbench.action.navigateBack",
+    "when": "canNavigateBack"
+  },
+  {
+    "key": "ctrl+u",
+    "command": "editor.action.goToImplementation"
+  }
+]
