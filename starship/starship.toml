@@ -21,3 +21,6 @@ truncation_length = 1
 
 [package]
 disabled = true
+
+[bun]
+disabled = true
