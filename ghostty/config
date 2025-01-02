@@ -1,1 +1,10 @@
-ghostty
+window-decoration = false
+mouse-hide-while-typing = true
+window-padding-x = 10
+window-padding-y = 0
+
+background-opacity = 0.9
+
+theme = catppuccin-mocha
+
+resize-overlay = never
