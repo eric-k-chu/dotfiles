@@ -3,11 +3,10 @@ $username\
 $hostname\
 $directory\
 $git_branch\
+$aws\
 $git_state\
 $git_status\
 $cmd_duration\
-$line_break\
-$python\
 $character"""
 
 [directory]
@@ -19,7 +18,7 @@ error_symbol = "[❯](red)"
 vimcmd_symbol = "[❮](green)"
 
 [git_branch]
-format = "[$branch]($style)"
+format = "[$branch]($style) "
 style = "bright-black"
 
 [git_status]
@@ -44,3 +43,7 @@ style = "yellow"
 [python]
 format = "[$virtualenv]($style) "
 style = "bright-black"
+
+[aws]
+format = '[$profile]($style) '
+style = 'bright-gray'
