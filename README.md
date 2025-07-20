@@ -1,0 +1,3 @@
+# dotfiles
+
+Using gnu stow
