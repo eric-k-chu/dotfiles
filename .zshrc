@@ -41,3 +41,4 @@ alias rrzsh="source ~/.zshrc"
 
 alias gwip="git aa && git com \"wip\""
 
+. "$HOME/.local/bin/env"
