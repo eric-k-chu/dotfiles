@@ -37,6 +37,8 @@ alias nvim="/opt/homebrew/bin/nvim"
 
 alias rrzsh="source ~/.zshrc"
 
+alias bao="pnpm"
+
 # git
 
 alias gwip="git aa && git com \"wip\""
