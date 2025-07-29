@@ -41,6 +41,6 @@ alias bao="pnpm"
 
 # git
 
-alias gwip="git aa && git com \"wip\""
+alias gwip="git aa && git com \"sync\""
 
 . "$HOME/.local/bin/env"
