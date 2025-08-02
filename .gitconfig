@@ -25,4 +25,8 @@
 
 [theme]
 	syntax-theme = gruvbox-dark
-
+[credential]
+	helper = 
+	helper = /usr/bin/git-credential-manager
+[credential "https://dev.azure.com"]
+	useHttpPath = true
