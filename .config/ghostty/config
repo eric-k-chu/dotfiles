@@ -4,9 +4,11 @@ theme = GruvboxDarkHard
 cursor-style = block
 cursor-style-blink = false
 shell-integration-features = no-cursor
-font-size = 16
+font-family = Input Mono
+font-size = 20
 resize-overlay = never
 window-padding-x = 10
 window-padding-y = 0
 mouse-hide-while-typing = true
 keybind = super+q=quit
+keybind = shift+enter=text:\n
