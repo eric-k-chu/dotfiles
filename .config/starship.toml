@@ -7,7 +7,7 @@ $aws\
 $git_state\
 $git_status\
 $cmd_duration\
-$character"""
+\n$character"""
 
 [directory]
 style = "blue"
