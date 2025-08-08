@@ -39,6 +39,8 @@ alias rrzsh="source ~/.zshrc"
 
 alias bao="pnpm"
 
+alias npm="pnpm"
+
 # git
 
 alias gwip="git aa && git com \"sync\""
