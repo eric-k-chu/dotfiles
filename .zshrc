@@ -41,7 +41,7 @@ alias bao="pnpm"
 
 alias npm="pnpm"
 
-alias cyc="madge --circular --extensions ts,tsx --exclude '.d.ts$' ./src/index.ts"
+alias cyc="madge --circular --extensions ts,tsx --exclude '.d.ts$' ./src"
 
 # git
 
