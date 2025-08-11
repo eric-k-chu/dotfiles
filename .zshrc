@@ -43,6 +43,8 @@ alias npm="pnpm"
 
 alias cyc="madge --circular --extensions ts,tsx --exclude '.d.ts$' ./src"
 
+alias ls="lsd"
+
 # git
 
 alias gwip="git aa && git com \"sync\""
