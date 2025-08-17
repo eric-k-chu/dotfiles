@@ -1,3 +1,3 @@
 # dotfiles
 
-Using gnu stow
+Using gnu stow, github auth with github cli
