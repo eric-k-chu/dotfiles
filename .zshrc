@@ -45,6 +45,8 @@ alias cyc="madge --circular --extensions ts,tsx --exclude '.d.ts$' ./src"
 
 alias ls="lsd"
 
+alias ai="opencode"
+
 # git
 
 alias gwip="git aa && git com \"sync\""
