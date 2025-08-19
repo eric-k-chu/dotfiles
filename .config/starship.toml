@@ -40,10 +40,6 @@ style = "bright-black"
 format = "[$duration]($style) "
 style = "yellow"
 
-[python]
-format = "[$virtualenv]($style) "
-style = "bright-black"
-
 [aws]
 format = '[$profile]($style) '
 style = 'bright-red'
