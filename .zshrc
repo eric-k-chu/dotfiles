@@ -47,6 +47,8 @@ alias ls="lsd"
 
 alias ai="opencode"
 
+export EDITOR=code
+
 # git
 
 alias gwip="git aa && git com \"sync\""
