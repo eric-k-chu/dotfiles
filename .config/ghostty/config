@@ -1,6 +1,6 @@
 window-decoration = true
 background-opacity = 0.8
-theme = GruvboxDarkHard
+theme = Gruvbox Dark Hard
 cursor-style = block
 cursor-style-blink = false
 shell-integration-features = no-cursor
