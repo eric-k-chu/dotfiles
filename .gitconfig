@@ -15,7 +15,7 @@
 	psh = push origin
 	up = push origin -f
 	undo = reset HEAD~
-	fclean = clean -fd
+	fclean = reset --hard HEAD && clean -fd
 	squash = "!f() { git reset --soft HEAD~$1 && git add . && git commit -m "$2"; }; f"
 	fa = fetch --all
 	aa = add .
