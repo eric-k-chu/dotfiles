@@ -54,11 +54,11 @@ alias gwip="git aa && git com \"sync\""
 alias gclean="git fclean && git clean -fd"
 
 gchore() {
-  gh pr create --base main --title "chore: $*"
+  gh pr create --base main --title "chore: ${*}"
 }
 
 gfeat() {
-  gh pr create --base main --title "feat: $*"
+  gh pr create --base main --title "feat: ${*}"
 }
 
 . "$HOME/.local/bin/env"
