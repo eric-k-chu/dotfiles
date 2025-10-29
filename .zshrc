@@ -51,6 +51,16 @@ alias ai="opencode"
 
 alias gwip="git aa && git com \"sync\""
 
+alias gclean="git fclean && git clean -fd"
+
+gchore() {
+  gh pr create --base main --title "chore: $1"
+}
+
+gfeat() {
+  gh pr create --base main --title "feat: $1"
+}
+
 . "$HOME/.local/bin/env"
 
 # The next line updates PATH for the Google Cloud SDK.
