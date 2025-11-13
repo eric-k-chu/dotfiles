@@ -72,3 +72,4 @@ if [ -f '/Users/ericchu/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/ericchu
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/ericchu/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/ericchu/google-cloud-sdk/completion.zsh.inc'; fi
+. "/Users/ericchu/.deno/env"
