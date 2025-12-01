@@ -53,6 +53,10 @@ alias caler="clear"
 
 alias caerl="clear"
 
+alias celar="clear"
+
+alias cealr="clear"
+
 # git
 
 alias gwip="git aa && git com \"sync\""
