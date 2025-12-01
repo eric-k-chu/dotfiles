@@ -47,6 +47,12 @@ alias ls="lsd"
 
 alias ai="opencode"
 
+alias claer="clear"
+
+alias caler="clear"
+
+alias caerl="clear"
+
 # git
 
 alias gwip="git aa && git com \"sync\""
