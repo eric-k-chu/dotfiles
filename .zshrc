@@ -64,15 +64,15 @@ alias gwip="git aa && git com \"sync\""
 alias gclean="git fclean && git clean -fd"
 
 gchore() {
-  gh pr create --base main --title "chore: ${*}" --label "backend" --assignee "@me"
+  gh pr create --base main --title "chore: ${*}" --assignee "@me"
 }
 
 gfeat() {
-  gh pr create --base main --title "feat: ${*}" --label "backend" --assignee "@me"
+  gh pr create --base main --title "feat: ${*}"  --assignee "@me"
 }
 
 gfix() {
-  gh pr create --base main --title "fix: ${*}" --label "backend" --assignee "@me"
+  gh pr create --base main --title "fix: ${*}" --assignee "@me"
 }
 
 . "$HOME/.local/bin/env"
