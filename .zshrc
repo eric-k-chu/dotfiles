@@ -33,7 +33,7 @@ eval "$(zoxide init zsh)"
 
 alias cd="z"
 
-alias nvim="/opt/homebrew/bin/nvim"
+alias nvim="/Users/ericchu/nvim/bin/nvim"
 
 alias rrzsh="source ~/.zshrc"
 
