@@ -75,6 +75,10 @@ gfix() {
   gh pr create --base main --title "fix: ${*}" --assignee "@me"
 }
 
+gwta() {
+  git wta "../${1}" -b "${1}"
+}
+
 . "$HOME/.local/bin/env"
 
 # The next line updates PATH for the Google Cloud SDK.
