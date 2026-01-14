@@ -79,6 +79,22 @@ gwta() {
   git wta "../${1}" -b "${1}"
 }
 
+gwtr() {
+  branch=$(git -C "$1" branch --show-current 2>/dev/null)
+  git worktree remove "$1" && [ -n "$branch" ] && git branch -D "$branch"
+}
+
+_gwtr() {
+  local worktrees
+  worktrees=$(git worktree list --porcelain | grep '^worktree' | cut -d' ' -f2 | tail -n +2)
+  _arguments "1:worktree:($worktrees)"
+}
+compdef _gwtr gwtr
+
+gam() {
+  git add . && git com "${*}"
+}
+
 . "$HOME/.local/bin/env"
 
 # The next line updates PATH for the Google Cloud SDK.
