@@ -57,6 +57,8 @@ alias celar="clear"
 
 alias cealr="clear"
 
+alias critic="critique"
+
 # git
 
 alias gwip="git aa && git com \"sync\""
