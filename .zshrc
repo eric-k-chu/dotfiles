@@ -86,12 +86,18 @@ gwtr() {
   git worktree remove "$1" && [ -n "$branch" ] && git branch -D "$branch"
 }
 
+gwtrf() {
+  branch=$(git -C "$1" branch --show-current 2>/dev/null)
+  git worktree remove "$1" -f && [ -n "$branch" ] && git branch -D "$branch"
+}
+
 _gwtr() {
   local worktrees
   worktrees=$(git worktree list --porcelain | grep '^worktree' | cut -d' ' -f2 | tail -n +2)
   _arguments "1:worktree:($worktrees)"
 }
 compdef _gwtr gwtr
+compdef _gwtr gwtrf
 
 gam() {
   git add . && git com "${*}"
