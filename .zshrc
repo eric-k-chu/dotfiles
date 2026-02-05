@@ -61,20 +61,20 @@ alias critic="critique"
 
 # git
 
-alias gwip="git aa && git com \"sync\""
+alias gwip="git aa && git com \"sync\" && git psh"
 
 alias gclean="git fclean && git clean -fd"
 
 gchore() {
-  gh pr create --base main --title "chore: ${*}" --assignee "@me"
+  git add . && git com "chore: ${*}" && git psh && gh pr create --base main --title "chore: ${*}" --assignee "@me"
 }
 
 gfeat() {
-  gh pr create --base main --title "feat: ${*}"  --assignee "@me"
+  git add . && git com "feat: ${*}" && git psh && gh pr create --base main --title "feat: ${*}" --assignee "@me"
 }
 
 gfix() {
-  gh pr create --base main --title "fix: ${*}" --assignee "@me"
+  git add . && git com "fix: ${*}" && git psh && gh pr create --base main --title "fix: ${*}" --assignee "@me"
 }
 
 gwta() {
@@ -101,6 +101,10 @@ compdef _gwtr gwtrf
 
 gam() {
   git add . && git com "${*}"
+}
+
+gamp() {
+  git add . && git com "${*}" && git psh
 }
 
 . "$HOME/.local/bin/env"
