@@ -66,15 +66,15 @@ alias gwip="git aa && git com \"sync\" && git psh"
 alias gclean="git fclean && git clean -fd"
 
 gchore() {
-  git add . && git com "chore: ${*}" && git psh && gh pr create --base main --title "chore: ${*}" --assignee "@me"
+  git add . && git com "chore: ${*}" && git psh && gh pr create --base main --title "chore: ${*}" --assignee "@me" --body ""
 }
 
 gfeat() {
-  git add . && git com "feat: ${*}" && git psh && gh pr create --base main --title "feat: ${*}" --assignee "@me"
+  git add . && git com "feat: ${*}" && git psh && gh pr create --base main --title "feat: ${*}" --assignee "@me" --body ""
 }
 
 gfix() {
-  git add . && git com "fix: ${*}" && git psh && gh pr create --base main --title "fix: ${*}" --assignee "@me"
+  git add . && git com "fix: ${*}" && git psh && gh pr create --base main --title "fix: ${*}" --assignee "@me" --body ""
 }
 
 gwta() {
