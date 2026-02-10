@@ -103,6 +103,14 @@ gam() {
   git add . && git com "${*}"
 }
 
+squash() {
+  git reset HEAD~${1:-1}
+}
+
+squish() {
+  git reset $(git merge-base main HEAD)
+}
+
 gamp() {
   git add . && git com "${*}" && git psh
 }
