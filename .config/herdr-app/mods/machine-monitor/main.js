@@ -5,11 +5,12 @@ import { exec, spaces, theme } from "herdr";
 const STATS_MS = 3000;
 const QUOTA_MS = 60000;
 
-// quota-axi and the provider CLIs it asks (agy, codex, …) live where the person's interactive
-// shell puts them (nvm, ~/.local/bin), which non-interactive shells leave off PATH.
+// Runs a POSIX script ($1) from the person's interactive login shell, so it sees what their
+// terminal sees: PATH (nvm, ~/.local/bin) and keys exported in ~/.zshrc (OPENROUTER_API_KEY, …).
+const IN_LOGIN_SHELL = `exec "\${SHELL:-sh}" -lic 'exec sh -c "$1"' sh "$1" </dev/null`;
+
 const QUOTA_SCRIPT = `
-login_path=$("\${SHELL:-sh}" -lic 'printf "\\n%s" "$PATH"' 2>/dev/null </dev/null | tail -n 1)
-[ -n "$login_path" ] && PATH="$login_path:$PATH"
+# Fallback for tools a login shell still leaves off PATH.
 for d in "$HOME"/.nvm/versions/node/*/bin "$HOME/.local/bin" /opt/homebrew/bin /usr/local/bin; do
   [ -d "$d" ] && PATH="$PATH:$d"
 done
@@ -77,7 +78,7 @@ const COMPACT_KEY = "machine-monitor.compact";
 const HIDDEN_PROVIDERS = new Set(["copilot"]);
 
 const credits = (c) => (c?.remaining == null ? null
-  : c.unit === "usd" ? `$${c.remaining}` : `${c.remaining} ${c.unit}`);
+  : c.unit === "usd" ? `$${c.remaining.toFixed(2)}` : `${Math.round(c.remaining)} ${c.unit}`);
 
 export default class MachineMonitor extends View {
   init(_props, cx) {
@@ -161,7 +162,7 @@ export default class MachineMonitor extends View {
     cx.notify();
     cx.spawn(async (cx) => {
       try {
-        const r = await exec("sh", ["-c", QUOTA_SCRIPT], { on: machine });
+        const r = await exec("sh", ["-c", IN_LOGIN_SHELL, "sh", QUOTA_SCRIPT], { on: machine });
         if (r.code !== 0) throw new Error(r.stderr.trim().slice(0, 200) || `exit ${r.code}`);
         // Sections are "@@default" (every provider) and "@@claude-<profile>" (that Claude login).
         // Newer quota-axi finds every Claude profile itself, so each section can repeat the same
@@ -269,7 +270,7 @@ export default class MachineMonitor extends View {
         .children(windows.map((w) => v_flex().gap(3)
           .child(h_flex().justify_between().text_size(11)
             .child(div().text_color(t.muted).truncate().child(w.label ?? w.id))
-            .child(div().text_color(t.dim).child(`${w.percentRemaining}% left${w.resetsAt ? ` · ${resetIn(w.resetsAt)}` : ""}`)))
+            .child(div().text_color(t.dim).child(`${Math.round(w.percentRemaining)}% left${w.resetsAt ? ` · ${resetIn(w.resetsAt)}` : ""}`)))
           .child(this.bar(w.percentRemaining, 100 - w.percentRemaining))));
     }));
   }
@@ -306,7 +307,7 @@ export default class MachineMonitor extends View {
         .child(tight
           ? h_flex().gap(6).items_center()
             .child(div().w(44).child(this.bar(tight.percentRemaining, 100 - tight.percentRemaining)))
-            .child(div().w(30).text_size(11).text_color(t.foreground).child(`${tight.percentRemaining}%`))
+            .child(div().w(30).text_size(11).text_color(t.foreground).child(`${Math.round(tight.percentRemaining)}%`))
             .child(div().w(42).text_size(11).text_color(t.dim).child(resetIn(tight.resetsAt)))
           : div().text_size(11).text_color(t.dim).child(credits(p.credits))));
     }
