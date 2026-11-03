@@ -7,6 +7,11 @@ $aws\
 $git_state\
 $git_status\
 $cmd_duration\
+$fill\
+$time\
+$status\
+$jobs\
+$battery\
 \n$character"""
 
 [directory]
@@ -43,3 +48,29 @@ style = "yellow"
 [aws]
 format = '[$profile]($style) '
 style = 'bright-red'
+
+[time]
+disabled = false
+format = "[$time]($style) "
+style = "white"
+time_format = "%R"
+
+[status]
+disabled = false
+format = "[$symbol$status]($style) "
+style = "red"
+symbol = "✘"
+
+[jobs]
+disabled = false
+symbol = "⚙ "
+threshold = 1
+format = "[$symbol$number]($style) "
+style = "bright-black"
+
+[battery]
+disabled = false
+format = "[$symbol$percentage]($style) "
+
+[fill]
+symbol = " "

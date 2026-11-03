@@ -1,5 +1,5 @@
 window-decoration = true
-background-opacity = 0.8
+background-opacity = 0.9
 theme = Catppuccin Mocha
 cursor-style = block
 cursor-style-blink = false
@@ -13,3 +13,4 @@ window-padding-y = 0
 mouse-hide-while-typing = true
 keybind = super+q=quit
 keybind = shift+enter=text:\n
+keybind = alt+backspace=text:\x1b\x7f
